@@ -1,0 +1,101 @@
+from Myro import *
+init("/dev/tty.scribbler")
+
+def danceSing():
+    step1()
+    step2()
+    step3()
+    HarryPotter()
+
+def step1():
+    forward(1,2)
+    backward(1,0.5)
+    forward(1,0.5)
+    turnRight(0.5,3)
+    turnLeft(1,.5)
+    turnRight(0.9,.5)
+    turnLeft(1,.5)
+    backward(0.7,4)
+
+def step2():
+    translate(1)
+    translate(-1)
+    translate(0)
+    turnLeft(.7,1.5)
+    forward(1,.3)
+    forward(.2,4)
+    forward(1,.3)
+
+def step3():
+    counter = 1
+    while(counter < 7):
+        forward(random(), 1)
+        turnRight(random(), 1)
+        counter = counter + 1
+
+def HarryPotter():
+    x=0
+    while x<=1:
+        beep(0.5,587.3)
+        beep(0.5,587.3)
+        beep(1,1568)
+        beep(0.3,1865)
+        beep(0.5,1760)
+        beep(1,1568)
+        beep(0.5,2349)
+        beep(1,2093)
+        beep(1,1760)
+        beep(1,1568)
+        beep(.3,1865)
+        beep(.3,1760)
+        beep(1,1397)
+        beep(.3,1568)
+        beep(1,1175)
+        x=x+1
+
+def Somebody():
+    x=0
+    while x<=1:
+        beep(.5,1047)
+        beep(.5,1047)
+        beep(.5,1175)
+        beep(.5,1175)
+        beep(.3,1319)
+        beep(.3,1397)
+        beep(.3,1568)
+        beep(.3,1319)
+        beep(.7,1175)
+        beep(.5,1047)
+        beep(.5,1047)
+        beep(.5,987.8)
+        beep(.5,987.7)
+        beep(.5,880)
+        beep(.5,880)
+        beep(.5,784)
+        x=x+1
+
+def menu():
+    print("1. The Whopp\n2. Random Ballroom Dance\n3. Somebody That I Used to Know Song\n4. Harry Potter Song\n0. Exit")
+    response=input("Which dance step/song would you like?")
+    print("Which dance step/song would you like?",response)
+    while response!="0":
+        if response=="1":
+            step3()
+            step2()
+        elif response=="2":
+            step1()
+            step3()
+        elif response=="3":
+            Somebody()
+        elif response=="4":
+            HarryPotter()
+        else:
+            print("I'm sorry, I don't know that one.")
+        print("1. The Whopp\n2. Random Ballroom Dance\n3. Somebody That I Used to Know Song\n4. Harry Potter Song\n0. Exit")
+        response=input("Which dance step/song would you like?")
+        print("Which dance step/song would you like?",response)
+
+
+
+    print("Have a good day")
+
